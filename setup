@@ -152,7 +152,7 @@ installation(){
 
 clear
 
-pprint "Welcome to Yukki Music Bot Setup Installer\n\n"
+pprint "Welcome to Venom Music Bot Setup Installer\n\n"
 
 pprint "If you see any error during Installation Process, Please refer to these files for logs: "
 
@@ -196,6 +196,8 @@ pprint "\nSUPPORT CHANNEL: "; color_reset; read SUPPORT_CHANNEL
 
 pprint "\nSUPPORT GROUP: "; color_reset; read SUPPORT_GROUP
 
+pprint "\nSUDO_USERS: "; color_reset; read SUDO_USERS
+
 pprint "\nSTRING SESSION: "; color_reset; read STRING_SESSION
 
 pprint "\n\nProcessing your vars, Wait a while!" "cgreen"
@@ -217,6 +219,8 @@ OWNER_USERNAME = $OWNER_USERNAME
 SUPPORT_CHANNEL = $SUPPORT_CHANNEL
 
 SUPPORT_GROUP = $SUPPORT_GROUP
+
+SUDO_USERS = $SUDO_USERS
 
 STRING_SESSION = $STRING_SESSION""" > .env
 
