@@ -340,7 +340,7 @@ async def pause(_, message: Message):
     await clientbot.pytgcalls.pause_stream(message.chat.id)
     await message.reply_photo(
                              photo="https://te.legra.ph/file/d1b8c412b0873b6fe1abc.png", 
-                             caption="**𝐏𝐚𝐮𝐬𝐞𝐝⏸...**"
+                             caption="**𝐏𝐚𝐮𝐬𝐞𝐝 𝗺𝘂𝘀𝗶𝗖⏸...**"
     )
 
 
