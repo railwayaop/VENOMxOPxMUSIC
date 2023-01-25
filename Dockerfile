@@ -1,11 +1,29 @@
-FROM python:3.9.7-slim-buster
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get install git curl python3-pip ffmpeg -y
-RUN pip3 install -U pip
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
-RUN apt-get install -y nodejs
-RUN npm i -g npm
-COPY . /VENOMxOPxMUSIC/
-WORKDIR /VENOMxOPxMUSIC/
-RUN pip3 install -U -r Installer
-CMD python3 -m modules
+
+
+
+
+FROM nikolaik/python-nodejs:python3.9-nodejs18
+
+RUN apt-get update -y && apt-get upgrade -y \
+
+    && apt-get install -y --no-install-recommends ffmpeg \
+
+    && apt-get clean \
+
+    && rm -rf /var/lib/apt/lists/*
+
+COPY . /app/
+
+WORKDIR /app/
+
+RUN git clone https://github.com/railwayaop/VENOMxOPxMUSIC/ Carbon
+
+RUN cd Carbon && pip3 install -U -r Installer
+
+CMD cd Carbon && bash start
+
+
+
+
+
+
