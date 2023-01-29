@@ -4,7 +4,7 @@ asyncio
 dnspython
 ffmpeg-python
 future
-yt-dlp==2021.11.10.1
+git+https://github.com/railwayaop/opyotdolf
 motor
 pillow
 psutil
